@@ -15,6 +15,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'godlygeek/tabular'
+Plug 'vim-scripts/taglist.vim'
 call plug#end()
 
 " clang format

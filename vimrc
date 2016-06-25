@@ -141,3 +141,36 @@ function! XTermPasteBegin()
   return ""
 endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+" cscope
+if has("cscope")
+  set csprg=/usr/bin/cscope
+  set csto=0
+  set cst
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+      cs add cscope.out
+  " else add database pointed to by environment
+  elseif $CSCOPE_DB != ""
+      cs add $CSCOPE_DB
+  endif
+  set csverb
+endif
+
+" Ctrl-_ to :cstag
+map <C-_> :cstag <C-R>=expand("<cword>")<CR><CR>
+" find all functions caling a certain functions
+map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
+" find all occurrneces of a particular C symbol
+map g<C-\> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
+" Using '<leader>f<mode>' then a search type makes the vim window
+" split vertically, with search result displayed in the new window.
+nmap <leader>fs :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fg :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fc :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ft :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>fe :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>ff :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>fi :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>fd :vert scs find d <C-R>=expand("<cword>")<CR><CR>
