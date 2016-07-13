@@ -26,9 +26,6 @@ else
   exit 2
 fi
 
-# copy colorscheme
-cp -r ~/.vim/plugged/vim-colors-solarized/colors ~/.vim/
-
 if [ $? -eq 0 ]; then
   echo "Installed sucessfully! Enjoy-:)"
 else

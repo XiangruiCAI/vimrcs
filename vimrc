@@ -68,10 +68,7 @@ set nu
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-set background=dark
-colorscheme solarized
+colorscheme desert
 
 
 " Set extra options when running in GUI mode
