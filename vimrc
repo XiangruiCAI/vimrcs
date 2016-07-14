@@ -61,8 +61,9 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-colorscheme molokai
-
+set t_Co=256
+set bg=dark
+colorscheme peaksea
 
 " Set extra options when running in GUI mode
 if has("gui_running")

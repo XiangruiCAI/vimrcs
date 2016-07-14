@@ -27,7 +27,7 @@ else
 fi
 
 # copy colorscheme
-cp -r ~/.vim/plugged/molokai/colors ~/.vim
+cp -r ~/.vim/plugged/peaksea/colors ~/.vim
 
 if [ $? -eq 0 ]; then
   echo "Installed sucessfully! Enjoy-:)"
