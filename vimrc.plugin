@@ -15,7 +15,7 @@ Plug 'raimondi/delimitmate'
 Plug 'Shougo/neocomplcache.vim'
 Plug 'godlygeek/tabular'
 Plug 'vim-scripts/taglist.vim'
-Plug 'vim-scripts/peaksea'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 " clang format

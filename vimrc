@@ -56,21 +56,40 @@ set novisualbell
 set t_vb=
 set tm=500
 
+set nowrap
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 set t_Co=256
 set bg=dark
-colorscheme peaksea
+colorscheme solarized 
+
+function! MaximizeWindow()    
+	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction
 
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
     set guioptions-=e
+    set guioptions-=m " 隐藏菜单栏
+    set guioptions-=T " 隐藏工具栏
+    set guioptions-=L " 隐藏左侧滚动条
+    set guioptions-=r " 隐藏右侧滚动条
+    set guioptions-=b " 隐藏底部滚动条
+    set showtabline=0 " 隐藏Tab栏
     set t_Co=256
     set guitablabel=%M\ %t
+    if has("gui_win32")
+      set guifont=consolas:h10:cANSI
+      au GUIEnter * simalt ~x
+    else
+      set guifont=Source\ Code\ Pro\ 12
+      au GUIEnter * call MaximizeWindow()
+    endif
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -164,3 +183,14 @@ nmap <leader>fe :vert scs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>ff :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <leader>fi :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <leader>fd :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+" fold
+set foldenable              " 开始折叠
+set foldmethod=syntax       " 设置语法折叠
+set foldcolumn=0            " 设置折叠区域的宽度
+"setlocal foldlevel=1       " 设置折叠层数为
+set foldlevelstart=99       " 打开文件是默认不折叠代码
+
+"set foldclose=all          " 设置为自动关闭折叠                
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+                            " 用空格键来开关折叠
