@@ -65,6 +65,7 @@ set nowrap
 syntax enable
 set t_Co=256
 set bg=dark
+"let g:solarized_termcolors=256
 colorscheme solarized 
 
 function! MaximizeWindow()    
