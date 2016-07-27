@@ -195,3 +195,9 @@ set foldlevelstart=99       " 打开文件是默认不折叠代码
 "set foldclose=all          " 设置为自动关闭折叠                
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
                             " 用空格键来开关折叠
+" split
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitright
