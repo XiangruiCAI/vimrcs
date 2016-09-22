@@ -17,8 +17,9 @@ Plug 'godlygeek/tabular'
 Plug 'vim-scripts/taglist.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips'
+Plug 'klen/python-mode'
+Plug 'LaTeX-Suite-aka-Vim-LaTeX'
 call plug#end()
 
 " clang format
