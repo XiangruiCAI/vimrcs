@@ -88,7 +88,7 @@ if has("gui_running")
       set guifont=consolas:h10:cANSI
       au GUIEnter * simalt ~x
     else
-      set guifont=Source\ Code\ Pro\ 12
+      set guifont=Source\ Code\ Pro\ 16
       au GUIEnter * call MaximizeWindow()
     endif
 endif
@@ -187,7 +187,7 @@ nmap <leader>fd :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 " fold
 set foldenable              " 开始折叠
-set foldmethod=syntax       " 设置语法折叠
+set foldmethod=indent       " 设置语法折叠
 set foldcolumn=0            " 设置折叠区域的宽度
 "setlocal foldlevel=1       " 设置折叠层数为
 set foldlevelstart=99       " 打开文件是默认不折叠代码
@@ -201,3 +201,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitright
+set splitbelow
+
+set cursorcolumn
+set colorcolumn=80
+
+" Trim trailing whitespace
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
