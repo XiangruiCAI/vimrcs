@@ -8,7 +8,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-commentary'
-Plug 'rhysd/vim-clang-format'
+"Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
@@ -26,8 +26,8 @@ Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 " clang format
-autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+"autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+"autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 " nerdtree
 " -close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
