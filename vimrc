@@ -208,3 +208,6 @@ set colorcolumn=80
 
 " Trim trailing whitespace
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
+
+" Python indention
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
