@@ -12,17 +12,17 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'Shougo/neocomplcache.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 Plug 'godlygeek/tabular'
 Plug 'vim-scripts/taglist.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'SirVer/ultisnips'
-Plug 'lervag/vimtex'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
+Plug 'vim-latex/vim-latex'
 call plug#end()
 
 " clang format
@@ -100,3 +100,28 @@ autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
 " neocomplcache
 source ~/.vim/vimrcs/neocomplcache.conf
+" neosnippet
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers. ###???###
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" latex-suite
+set iskeyword+=:
+" indentLine, keep my conceal settings for tex
+autocmd BufNewFile,BufRead *.tex let g:indentLine_setConceal = 0
+" no conceal for the active line
+set concealcursor=""
