@@ -23,6 +23,9 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-syntastic/syntastic'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " clang format
@@ -121,7 +124,24 @@ endif
 
 " latex-suite
 set iskeyword+=:
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
 " indentLine, keep my conceal settings for tex
 autocmd BufNewFile,BufRead *.tex let g:indentLine_setConceal = 0
 " no conceal for the active line
 set concealcursor=""
+" markdown
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_math = 1
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
