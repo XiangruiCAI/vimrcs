@@ -24,7 +24,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
-Plug 'vim-syntastic/syntastic'
 Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
