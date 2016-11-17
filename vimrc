@@ -90,9 +90,10 @@ set nowrap
 " Enable syntax highlighting
 syntax enable
 set t_Co=256
-set bg=dark
-"let g:solarized_termcolors=256
-colorscheme solarized 
+" set bg=dark
+" let g:solarized_termcolors=256
+" colorscheme solarized 
+colorscheme desert
 
 function! MaximizeWindow()    
 	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
@@ -236,7 +237,7 @@ set colorcolumn=80
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
 " Python indention
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+" autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
