@@ -90,10 +90,10 @@ set nowrap
 " Enable syntax highlighting
 syntax enable
 set t_Co=256
-" set bg=dark
+set bg=dark
 " let g:solarized_termcolors=256
 " colorscheme solarized 
-colorscheme desert
+colorscheme gruvbox
 
 function! MaximizeWindow()    
 	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
