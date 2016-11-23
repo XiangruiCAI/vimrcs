@@ -126,10 +126,8 @@ endif
 set iskeyword+=:
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
-" indentLine, keep my conceal settings for tex
-autocmd BufNewFile,BufRead *.tex let g:indentLine_setConceal = 0
-" no conceal for the active line
-set concealcursor=""
+" no conceal for latex files
+let g:tex_conceal = ""
 " markdown
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_math = 1

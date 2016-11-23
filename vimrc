@@ -21,7 +21,7 @@ nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+" command W w !sudo tee % > /dev/null
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -230,8 +230,9 @@ nnoremap <C-H> <C-W><C-H>
 set splitright
 set splitbelow
 
-set cursorcolumn
+" set cursorcolumn
 set colorcolumn=80
+set tw=79
 
 " Trim trailing whitespace
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
@@ -288,3 +289,20 @@ map 0 ^
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    " call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+endif
+
+" spell check
+set spell spelllang=en_us
