@@ -233,6 +233,7 @@ set splitbelow
 " set cursorcolumn
 set colorcolumn=80
 set tw=79
+set nu
 
 " Trim trailing whitespace
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
@@ -278,11 +279,11 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
+"try
+"  set switchbuf=useopen,usetab,newtab
+"  set stal=2
+"catch
+"endtry
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
