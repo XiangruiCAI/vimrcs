@@ -231,8 +231,9 @@ set splitright
 set splitbelow
 
 " set cursorcolumn
+set nu
 set colorcolumn=80
-set tw=79
+" set tw=79
 
 " Trim trailing whitespace
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
