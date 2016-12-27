@@ -28,7 +28,7 @@ fi
 
 # copy colorscheme
 cp -r ~/.vim/plugged/vim-colors-solarized/colors ~/.vim
-cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim colors/
+cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim ~/.vim/colors/
 
 if [ $? -eq 0 ]; then
   echo "Installed sucessfully! Enjoy-:)"
