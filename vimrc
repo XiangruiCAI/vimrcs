@@ -292,7 +292,12 @@ map 0 ^
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Put plugins and dictionaries in this dir (also on Windows)
-let vimDir = '$HOME/.vim'
+if has("win16") || has("win32")
+    let vimDir = '$HOME/vimfiles'
+else
+    let vimDir = '$Home/.vim'
+endif
+
 let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
