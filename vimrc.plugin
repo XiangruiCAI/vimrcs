@@ -30,6 +30,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'endel/vim-github-colorscheme'
 call plug#end()
 
 " clang format
@@ -106,7 +107,7 @@ let g:autoformat_remove_trailing_spaces = 0
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
 " neocomplcache
-source ~/vimrc/neocomplcache.conf
+source ~/.vim/vimrcs/neocomplcache.conf
 " neosnippet
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -147,3 +148,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
+
+"vim-airline
+let g:airline_powerline_fonts=1
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+set laststatus=2
+set ttimeoutlen=50
