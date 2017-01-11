@@ -106,6 +106,7 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
+autocmd BufEnter * silent! lcd %:p:h
 " neocomplcache
 source ~/.vim/vimrcs/neocomplcache.conf
 " neosnippet
@@ -133,6 +134,19 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
 " no conceal for latex files
 let g:tex_conceal = ""
+let g:Tex_IgnoredWarnings =
+\'Underfull'."\n".
+\'Overfull'."\n".
+\'specifier changed to'."\n".
+\'You have requested'."\n".
+\'Missing number, treated as zero.'."\n".
+\'There were undefined references'."\n".
+\'LaTeX Font Warning:'."\n".
+\'Citation %.%# undefined'
+let g:Tex_IgnoreLevel = 8
+autocmd FileType tex set tabstop=2|set shiftwidth=2
+" cite completion
+let g:Tex_RememberCiteSearch=1
 " markdown
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_math = 1

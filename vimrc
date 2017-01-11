@@ -149,10 +149,6 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
 set ai "Auto indent
 set si "Smart indent
 
@@ -233,7 +229,8 @@ set splitbelow
 " set cursorcolumn
 set nu
 set colorcolumn=80
-" set tw=79
+set tw=79
+set fo-=l
 
 " Trim trailing whitespace
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
@@ -255,8 +252,8 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 " Close all the buffers
 map <leader>ba :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <leader>n :bnext<cr>
+map <leader>p :bprevious<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
