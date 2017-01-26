@@ -41,7 +41,7 @@ else
 endif
 
 " Height of the command bar
-set cmdheight=2
+" set cmdheight=2
 
 "Always show current position
 set ruler

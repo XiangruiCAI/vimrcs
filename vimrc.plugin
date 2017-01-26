@@ -30,7 +30,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'endel/vim-github-colorscheme'
+Plug 'python-mode/python-mode'
 call plug#end()
 
 " clang format
@@ -87,10 +87,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " see the docstrings for folded code
 let g:SimpylFold_docstring_preview=1
-
-" customize YCM
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 let python_highlight_all=1
 
@@ -150,18 +146,6 @@ let g:Tex_RememberCiteSearch=1
 " markdown
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_math = 1
-
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_python_pylint_args='--disable=C0111,R0903,C0301'
 
 "vim-airline
 let g:airline_powerline_fonts=1
