@@ -4,14 +4,14 @@ else
     call plug#begin('~/.vim/plugged')
 endif
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'tpope/vim-surround'
+"Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-commentary'
+"Plug 'scrooloose/nerdcommenter'
+"Plug 'tpope/vim-commentary'
 "Plug 'rhysd/vim-clang-format'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -29,8 +29,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'python-mode/python-mode'
+"Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " clang format
@@ -102,7 +101,6 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
-autocmd BufEnter * silent! lcd %:p:h
 " neocomplcache
 source ~/.vim/vimrcs/neocomplcache.conf
 " neosnippet
