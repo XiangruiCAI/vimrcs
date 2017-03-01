@@ -92,8 +92,8 @@ syntax enable
 set t_Co=256
 set bg=dark
 " let g:solarized_termcolors=256
-" colorscheme solarized 
-colorscheme gruvbox
+colorscheme solarized 
+" colorscheme gruvbox
 
 function! MaximizeWindow()    
 	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
@@ -229,7 +229,7 @@ set splitbelow
 " set cursorcolumn
 set nu
 set colorcolumn=80
-set tw=79
+" set tw=79
 set fo-=l
 
 " Trim trailing whitespace
