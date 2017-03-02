@@ -93,7 +93,7 @@ set t_Co=256
 set bg=dark
 " let g:solarized_termcolors=256
 " colorscheme solarized 
-colorscheme molokai
+colorscheme Tomorrow-Night
 
 function! MaximizeWindow()    
 	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
