@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # git clone this repository into ~/.vim/vimrcs
 
@@ -27,9 +27,7 @@ else
 fi
 
 # copy colorscheme
-cp -r ~/.vim/plugged/vim-colors-solarized/colors ~/.vim
-cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim ~/.vim/colors/
-cp ~/.vim/plugged/molokai/colors/molokai.vim ~/.vim/colors/
+cp -r ~/.vim/plugged/tomorrow-theme/vim/colors ~/.vim
 
 if [ $? -eq 0 ]; then
   echo "Installed sucessfully! Enjoy-:)"
