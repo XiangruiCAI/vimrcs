@@ -19,10 +19,6 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
-" (useful for handling the permission-denied error)
-" command W w !sudo tee % > /dev/null
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,9 +35,6 @@ if has("win16") || has("win32")
 else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
-
-" Height of the command bar
-" set cmdheight=2
 
 "Always show current position
 set ruler
@@ -149,7 +142,6 @@ set shiftwidth=4
 set tabstop=4
 
 set ai "Auto indent
-set si "Smart indent
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
