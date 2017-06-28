@@ -27,8 +27,9 @@ else
 fi
 
 # copy colorscheme
-cp -r ~/.vim/plugged/tomorrow-theme/vim/colors ~/.vim
-cp ~/.vim/plugged/molokai/colors/molokai.vim ~/colors/
+# cp -r ~/.vim/plugged/tomorrow-theme/vim/colors ~/.vim
+mkdir ../colors
+cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim ../colors/
 
 if [ $? -eq 0 ]; then
   echo "Installed sucessfully! Enjoy-:)"
