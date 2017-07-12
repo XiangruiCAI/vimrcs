@@ -5,10 +5,10 @@ else
 endif
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
@@ -21,7 +21,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
-Plug 'tomasr/molokai'
+" Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
