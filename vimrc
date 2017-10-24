@@ -107,7 +107,7 @@ if has("gui_running")
       set guifont=consolas:h10:cANSI
       au GUIEnter * simalt ~x
     else
-      set guifont=Source\ Code\ Pro\ 10
+      set guifont=Source\ Code\ Pro\ 12
       au GUIEnter * call MaximizeWindow()
     endif
 endif
@@ -228,6 +228,11 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
 " Python indention
 " autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+filetype plugin indent on
+autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType python setlocal foldmethod=indent
+"默认展开所有代码
+set foldlevel=99
 
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
