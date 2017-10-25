@@ -21,11 +21,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
-" Plug 'tomasr/molokai'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale'
 Plug 'maralla/completor.vim'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 " clang format
