@@ -25,6 +25,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale'
 Plug 'maralla/completor.vim'
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 " clang format
