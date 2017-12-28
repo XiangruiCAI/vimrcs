@@ -12,7 +12,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
-" Plug 'Shougo/neocomplcache.vim'
+Plug 'Shougo/neocomplcache.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-scripts/taglist.vim'
@@ -21,11 +21,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'vim-latex/vim-latex'
 Plug 'plasticboy/vim-markdown'
-" Plug 'morhetz/gruvbox'
-Plug 'w0rp/ale'
-Plug 'maralla/completor.vim'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+"Plug 'w0rp/ale'
+"Plug 'maralla/completor.vim'
+"Plug 'skywind3000/asyncrun.vim'
+"Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 " clang format
@@ -84,7 +84,7 @@ let g:autoformat_remove_trailing_spaces = 0
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
 " neocomplcache
-" source ~/.vim/vimrcs/neocomplcache.conf
+source ~/.vim/vimrcs/neocomplcache.conf
 " neosnippet
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
