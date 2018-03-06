@@ -84,7 +84,7 @@ set nowrap
 syntax enable
 set t_Co=256
 set bg=dark
-colorscheme solarized
+colorscheme gruvbox
 
 function! MaximizeWindow()    
 	silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
