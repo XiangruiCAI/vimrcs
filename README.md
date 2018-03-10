@@ -1,15 +1,31 @@
-# xr's vimrcs
+# Vimrcs for Data Science and Writing.
 
-## main features
+## Main Features
 - Using vim-plug to manage plugins.
 - Some settings from amix's ultimate vimrc.
-- add latex support (lervag/vimtex)
-- more git support in nerdtree (Xuyuanp/nerdtree-git-plugin)
-- autoformat for c++ and python (Chiel92/vim-autoformat)
-- autocomplete with neocomplcache
+- Add latex support (lervag/vimtex)
+- More git support in nerdtree (Xuyuanp/nerdtree-git-plugin)
+- Autoformat for c++ and python (Chiel92/vim-autoformat)
+- Autocomplete with neocomplcache
+- Support windows and linux
 
-## install
-    clone this repo and run `install.sh`
+## Installation
+    cd ~
+    mkdir .vim
+    cd .vim
+    git clone https://github.com/XiangruiCAI/vimrcs
+    cd vimrcs
+    sh install.sh
 
-## todo
-    support for windows
+NOTE: the users needs install `git bash` on windows (it is usually installed along with `git`). The above commonds can run in `git bash` with out any modification. 
+
+# Shortcuts
+
+Currently, the shortcuts can refer to the ones of [amix](https://github.com/amix/vimrc). I will finish a table of shortcuts soon.
+
+# TODO
+
+- More support for python, especially for data analytics, such as jupyter.
+- Support for c++ programming.
+- Better README file.
+

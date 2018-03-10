@@ -1,8 +1,8 @@
-if has("win16") || has("win32")
-    call plug#begin('~/vimfiles/ftplugin')
-else
-    call plug#begin('~/.vim/plugged')
-endif
+"if has("win16") || has("win32")
+"    call plug#begin('~/vimfiles/ftplugin')
+"else
+call plug#begin('~/.vim/plugged')
+"endif
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'junegunn/goyo.vim'

@@ -197,13 +197,15 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
+" Linebreak on 80 characters
 set lbr
-set tw=500
-
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+set tw=80
+let &colorcolumn=join(range(81,999),",")
+let &colorcolumn="81,".join(range(120,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 
 """"""""""""""""""""""""""""""
