@@ -33,7 +33,7 @@ au GUIEnter * simalt ~x
 
 " Colorscheme
 set background=dark
-colorscheme gruvbox
+colorscheme molokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

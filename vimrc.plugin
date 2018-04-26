@@ -35,5 +35,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'plasticboy/vim-markdown'
 Plug 'morhetz/gruvbox'
 Plug 'vim-scripts/peaksea'
+Plug 'tomasr/molokai'
 call plug#end()
 
