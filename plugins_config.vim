@@ -197,7 +197,7 @@ let g:formatter_yapf_style = 'pep8'
 "if has("win16") || has("win32")
 "    source ~/vimfiles/vimrcs/neocomplcache.conf
 "else
-source ~/.vim/vimrcs/neocomplcache.conf
+source ~/.vim/vimrcs/neocomplcache.vim
 "endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

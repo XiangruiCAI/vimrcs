@@ -1,5 +1,7 @@
 # Vimrcs for Data Science and Writing.
 
+[TOC]
+
 ## Main Features
 - Using vim-plug to manage plugins.
 - Some settings from amix's ultimate vimrc.
@@ -18,6 +20,19 @@
     sh install.sh
 
 NOTE: the users needs install `git bash` on windows (it is usually installed along with `git`). The above commonds can run in `git bash` with out any modification. 
+
+## Project structure
+
+- `.vimrc`: configuration file that will be put in `~/`.
+- `basic.vim`: basic configuration.
+- `extended.vim`: extended configuration.
+- `filetypes.vim`: configuration for different file types, such as for tex and
+  python.
+- `vimrc.plugin`: plugins managed by `vim-plug`.
+- `plugin_config.vim`: configuration for plugins.
+- `neocomplcache.vim`: configuration for neocomplcache, imported by
+  `plugin_config.vim`.
+- `install.sh`: installation script.
 
 # Shortcuts
 
