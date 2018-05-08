@@ -1,6 +1,17 @@
 # Vimrcs for Data Science and Writing.
 
-[TOC]
+## Table of Contents
+=================
+
+
+* [Vimrcs for Data Science and Writing\.](#vimrcs-for-data-science-and-writing)
+  * [Main Features](#main-features)
+  * [Installation](#installation)
+  * [Project structure](#project-structure)
+* [Shortcuts](#shortcuts)
+* [TODO](#todo)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
 
 ## Main Features
 - Using vim-plug to manage plugins.
