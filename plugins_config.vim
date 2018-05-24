@@ -197,7 +197,7 @@ let g:formatter_yapf_style = 'pep8'
 "if has("win16") || has("win32")
 "    source ~/vimfiles/vimrcs/neocomplcache.conf
 "else
-source ~/.vim/vimrcs/neocomplcache.conf
+source ~/.vim/vimrcs/neocomplcache.vim
 "endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -256,3 +256,12 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_new_list_item_indent = 2
