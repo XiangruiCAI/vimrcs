@@ -192,34 +192,14 @@ autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neocomplcache
+" neocomplcache (deprecated if using vim8)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "if has("win16") || has("win32")
 "    source ~/vimfiles/vimrcs/neocomplcache.conf
 "else
-source ~/.vim/vimrcs/neocomplcache.vim
+" source ~/.vim/vimrcs/neocomplcache.vim
 "endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neosnippet
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers. ###???###
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimtex
@@ -227,12 +207,18 @@ endif
 let g:vimtex_view_general_viewer = 'SumatraPDF'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
-    \ . ' -inverse-search "gvim --servername ' . v:servername
-    \ . ' --remote-send \"^<C-\^>^<C-n^>'
-    \ . ':drop \%f^<CR^>:\%l^<CR^>:normal\! zzzv^<CR^>'
-    \ . ':execute ''drop '' . fnameescape(''\%f'')^<CR^>'
-    \ . ':\%l^<CR^>:normal\! zzzv^<CR^>'
-    \ . ':call remote_foreground('''.v:servername.''')^<CR^>^<CR^>\""'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+
+" if you want to configure inverse search from vim, use the following settings
+" it may have some bugs
+"let g:vimtex_view_general_options
+"    \ = '-reuse-instance -forward-search @tex @line @pdf'
+"    \ . ' -inverse-search "gvim --servername ' . v:servername
+"    \ . ' --remote-send \"^<C-\^>^<C-n^>'
+"    \ . ':drop \%f^<CR^>:\%l^<CR^>:normal\! zzzv^<CR^>'
+"    \ . ':execute ''drop '' . fnameescape(''\%f'')^<CR^>'
+"    \ . ':\%l^<CR^>:normal\! zzzv^<CR^>'
+"    \ . ':call remote_foreground('''.v:servername.''')^<CR^>^<CR^>\""'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gutentags
@@ -265,3 +251,10 @@ let g:vim_markdown_no_default_key_mappings = 1
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_new_list_item_indent = 2
+
+
+" ultisnips
+" Trigger configuration. Do not use <tab> if you use
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
