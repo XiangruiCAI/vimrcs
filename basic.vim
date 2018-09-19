@@ -201,15 +201,27 @@ set shiftwidth=4
 set tabstop=4
 
 " Linebreak on 80 characters
-set lbr
+" set lbr
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
-set tw=80
-let &colorcolumn=join(range(81,999),",")
-let &colorcolumn="81,".join(range(120,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-
+set nowrap "Wrap lines
+" toggle auto wrap by ctrl-b
+" <leader>w: 1st hit-wrap with linebreak, 2nd hit-wrap with nolinebreak; 3rd hit-nowrap
+function AutoWrapToggle()
+  if (&wrap == 1)
+    if (&linebreak == 1)
+      set nolinebreak
+    else
+      set nowrap
+    endif
+  else
+    set wrap
+    set linebreak
+  endif
+endfunction
+" remove auto hard wrap, codes can be formatted by a plugin, and texts could be formated by `gq`
+set tw=0
+map <leader>w :call AutoWrapToggle()<CR>
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

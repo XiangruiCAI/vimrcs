@@ -53,5 +53,6 @@ Plug 'tomasr/molokai'
 Plug 'w0rp/ale'
 Plug 'junegunn/fzf'
 Plug 'ggreer/the_silver_searcher'
+Plug 'tpope/vim-surround'
 call plug#end()
 
