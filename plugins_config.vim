@@ -197,29 +197,29 @@ let g:formatter_yapf_style = 'pep8'
 "if has("win16") || has("win32")
 "    source ~/vimfiles/vimrcs/neocomplcache.conf
 "else
-source ~/.vim/vimrcs/neocomplcache.vim
+" source ~/.vim/vimrcs/neocomplcache.vim
 "endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neosnippet
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers. ###???###
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+" 
+" " SuperTab like snippets behavior.
+" "imap <expr><TAB>
+" " \ pumvisible() ? "\<C-n>" :
+" " \ neosnippet#expandable_or_jumpable() ?
+" " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" 
+" " For conceal markers. ###???###
+" if has('conceal')
+"   set conceallevel=2 concealcursor=niv
+" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimtex

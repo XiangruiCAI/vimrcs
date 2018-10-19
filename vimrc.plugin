@@ -24,19 +24,37 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'raimondi/delimitmate'
-Plug 'Shougo/neocomplcache.vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/neocomplcache.vim'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-scripts/taglist.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
 Plug 'lervag/vimtex'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'morhetz/gruvbox'
-Plug 'vim-scripts/peaksea'
+Plug 'AlessandroYorba/Sierra'
+Plug 'liuchengxu/space-vim-dark'
 Plug 'tomasr/molokai'
 Plug 'tpope/vim-surround'
+" for neovim
+Plug 'philip-karlsson/bolt.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/denite.nvim'
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+	Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+Plug 'jsfaint/gen_tags.vim'
+Plug 'donRaphaco/neotex', { 'for': 'tex' }
+if has("nvim")
+    let g:vimtex_latexmk_progname = 'nvr'
+endif
+Plug 'iCyMind/NeoSolarized'
 call plug#end()
 
