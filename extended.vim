@@ -178,3 +178,4 @@ endfunc
 " format options
 set fo+=t
 set fo-=l
+set fo+=mM " to support wrap in Chinese

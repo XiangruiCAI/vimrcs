@@ -192,7 +192,7 @@ autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neocomplcache
+" neocomplcache (deprecated if using vim8)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "if has("win16") || has("win32")
 "    source ~/vimfiles/vimrcs/neocomplcache.conf
@@ -224,7 +224,6 @@ let g:formatter_yapf_style = 'pep8'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimtex
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 if has("win16") || has("win32")
     let g:vimtex_view_general_viewer = 'SumatraPDF'
     let g:vimtex_view_general_options
@@ -270,3 +269,10 @@ let g:vim_markdown_no_default_key_mappings = 1
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_new_list_item_indent = 2
+
+
+" ultisnips
+" Trigger configuration. Do not use <tab> if you use
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
