@@ -61,5 +61,7 @@ Plug 'ggreer/the_silver_searcher'
 Plug 'tpope/vim-surround'
 Plug 'jsfaint/gen_tags.vim'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
+Plug 'mechatroner/rainbow_csv'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
