@@ -32,6 +32,7 @@ mkdir ../colors
 cp ~/.vim/plugged/gruvbox/colors/gruvbox.vim ~/.vim/colors/
 cp ~/.vim/plugged/peaksea/colors/peaksea.vim ~/.vim/colors/
 cp ~/.vim/plugged/molokai/colors/molokai.vim ~/.vim/colors/
+cp ~/.vim/plugged/vim-solarized8/colors/* ~/.vim/colors/
 
 if [ $? -eq 0 ]; then
   echo "Installed sucessfully! Enjoy-:)"
