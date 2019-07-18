@@ -39,6 +39,7 @@ Plug 'morhetz/gruvbox'
 Plug 'AlessandroYorba/Sierra'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'tomasr/molokai'
+Plug 'lifepillar/vim-solarized8'
 " vim 8
 Plug 'w0rp/ale'
 Plug 'junegunn/fzf'
