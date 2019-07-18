@@ -165,7 +165,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=e
     set t_Co=256
-    " set guitablabel=%M\ %t
+    set guitablabel=%M\ %t
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -204,7 +204,7 @@ set tabstop=4
 " set lbr
 set ai "Auto indent
 set si "Smart indent
-set nowrap "Wrap lines
+" set nowrap "Wrap lines
 " toggle auto wrap by ctrl-b
 " <leader>w: 1st hit-wrap with linebreak, 2nd hit-wrap with nolinebreak; 3rd hit-nowrap
 function AutoWrapToggle()
@@ -222,6 +222,8 @@ endfunction
 " remove auto hard wrap, codes can be formatted by a plugin, and texts could be formated by `gq`
 set tw=0
 map <leader>w :call AutoWrapToggle()<CR>
+" wrap for Chinese
+set formatoptions+=mM,mB
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

@@ -12,7 +12,7 @@
 if has("mac") || has("macunix")
     set gfn=IBM\ Plex\ Mono:h12,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
-    set gfn=Source\ Code\ Pro:h12
+    set gfn=Inconsolata:h14
 elseif has("gui_gtk2")
     set gfn=Source\ Code\ Pro:h12
 elseif has("linux")

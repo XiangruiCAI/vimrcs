@@ -1,8 +1,4 @@
-"if has("win16") || has("win32")
-"    call plug#begin('~/vimfiles/ftplugin')
-"else
 call plug#begin('~/.vim/plugged')
-"endif
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/bufexplorer.zip'
 Plug 'junegunn/goyo.vim'
@@ -26,23 +22,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-git'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'raimondi/delimitmate'
-"Plug 'Shougo/neocomplcache.vim'
-"Plug 'Shougo/neosnippet.vim'
-"Plug 'Shougo/neosnippet-snippets'
-" Plug 'Shougo/neocomplcache.vim'
-" if has('nvim')
-"     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"     Plug 'Shougo/deoplete.nvim'
-"     Plug 'roxma/nvim-yarp'
-"    Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" let g:deoplete#enable_at_startup = 1
-" Plug 'Shougo/neosnippet.vim'
-" Plug 'Shougo/neosnippet-snippets'
-Plug 'maralla/completor.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'Shougo/neocomplcache.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+" Plug 'maralla/completor.vim'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 Plug 'vim-scripts/taglist.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'Chiel92/vim-autoformat'
@@ -59,7 +44,6 @@ Plug 'w0rp/ale'
 Plug 'junegunn/fzf'
 Plug 'ggreer/the_silver_searcher'
 Plug 'tpope/vim-surround'
-Plug 'jsfaint/gen_tags.vim'
 Plug 'donRaphaco/neotex', { 'for': 'tex' }
 Plug 'mechatroner/rainbow_csv'
 Plug 'chrisbra/csv.vim'
