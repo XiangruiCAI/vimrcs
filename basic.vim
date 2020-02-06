@@ -46,6 +46,9 @@
 " map <leader> to ','
 let mapleader=','
 
+" disable conceal
+set conceallevel=0
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
