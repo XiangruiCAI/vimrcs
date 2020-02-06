@@ -43,6 +43,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" map <leader> to ','
+let mapleader=','
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -205,6 +208,7 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 " set nowrap "Wrap lines
+
 " toggle auto wrap by ctrl-b
 " <leader>w: 1st hit-wrap with linebreak, 2nd hit-wrap with nolinebreak; 3rd hit-nowrap
 function AutoWrapToggle()
@@ -219,6 +223,7 @@ function AutoWrapToggle()
     set linebreak
   endif
 endfunction
+
 " remove auto hard wrap, codes can be formatted by a plugin, and texts could be formated by `gq`
 set tw=0
 map <leader>w :call AutoWrapToggle()<CR>

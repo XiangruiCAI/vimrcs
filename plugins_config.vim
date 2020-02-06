@@ -224,8 +224,11 @@ let g:formatter_yapf_style = 'pep8'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimtex
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" setting for latex file
+let g:tex_flavor='latex'
 if has("win16") || has("win32")
     let g:vimtex_view_general_viewer = 'SumatraPDF'
+    let g:vimtex_view_general_options_latexmk = '-reuse-instance'
     let g:vimtex_view_general_options
         \ = '-reuse-instance -forward-search @tex @line @pdf'
         \ . ' -inverse-search "gvim --servername ' . v:servername
