@@ -241,6 +241,22 @@ else
     let g:vimtex_view_general_viewer = 'zathura'
 endif
 
+" ignore some warnings
+" Disable overfull/underfull \hbox and all package warnings
+let g:vimtex_quickfix_latexlog = {
+      \ 'overfull' : 0,
+      \ 'underfull' : 0,
+      \ 'packages' : {
+      \   'default' : 0,
+      \ },
+      \}
+
+" the quickfix window will close after this number of motions
+let g:vimtex_quickfix_autoclose_after_keystrokes = 3
+
+" don't open the quickfix windows in case there are only warnings.
+let g:vimtex_quickfix_open_on_warning = 0
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gutentags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -212,7 +212,6 @@ set ai "Auto indent
 set si "Smart indent
 " set nowrap "Wrap lines
 
-" toggle auto wrap by ctrl-b
 " <leader>w: 1st hit-wrap with linebreak, 2nd hit-wrap with nolinebreak; 3rd hit-nowrap
 function AutoWrapToggle()
   if (&wrap == 1)

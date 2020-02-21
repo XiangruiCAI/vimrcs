@@ -12,7 +12,10 @@
 if has("mac") || has("macunix")
     set gfn=IBM\ Plex\ Mono:h12,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
-    set gfn=JetBrains\ Mono:h12
+    set guifont=JetBrains\ Mono:h12
+    set guifontwide=FangSong:h14
+    " set guifontwide=Sarasa\ Term\ SC:h12
+    set ambw=double
 elseif has("gui_gtk2")
     set gfn=Source\ Code\ Pro:h12
 elseif has("linux")
@@ -33,14 +36,14 @@ au GUIEnter * simalt ~x
 
 " Colorscheme
 set background=dark
-colorscheme solarized8
+colorscheme molokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
-autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
+" map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
+" autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -175,7 +178,12 @@ func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
 endfunc
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => text format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " format options
 set fo+=t
 set fo-=l
 set fo+=mM " to support wrap in Chinese
+
