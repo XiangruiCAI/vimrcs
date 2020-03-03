@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important:
-"       This requries that you install https://github.com/amix/vimrc !
+"
+" plugin configuration
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -112,13 +112,6 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimroom
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:goyo_width=100
-let g:goyo_margin_top = 2
-let g:goyo_margin_bottom = 2
-nnoremap <silent> <leader>z :Goyo<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -190,36 +183,6 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 autocmd FileType vim,tex let b:autoformat_autoindent=0
 let g:formatter_yapf_style = 'pep8'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neocomplcache (deprecated if using vim8)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"if has("win16") || has("win32")
-"    source ~/vimfiles/vimrcs/neocomplcache.conf
-"else
-" source ~/.vim/vimrcs/neocomplcache.vim
-"endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neosnippet
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin key-mappings.
-" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-" xmap <C-k>     <Plug>(neosnippet_expand_target)
-" 
-" " SuperTab like snippets behavior.
-" "imap <expr><TAB>
-" " \ pumvisible() ? "\<C-n>" :
-" " \ neosnippet#expandable_or_jumpable() ?
-" " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-" 
-" " For conceal markers. ###???###
-" if has('conceal')
-"   set conceallevel=2 concealcursor=niv
-" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vimtex

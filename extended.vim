@@ -1,12 +1,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important: 
-"       This requries that you install https://github.com/amix/vimrc !
+"       
+"       additionally settings for vim
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
+"       unfortunately, vim has poor support for chinese
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
 if has("mac") || has("macunix")
@@ -36,7 +37,7 @@ au GUIEnter * simalt ~x
 
 " Colorscheme
 set background=dark
-colorscheme molokai
+colorscheme space-vim-dark
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,13 +178,4 @@ endfunc
 func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
 endfunc
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => text format
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" format options
-set fo+=t
-set fo-=l
-set fo+=mM " to support wrap in Chinese
 
