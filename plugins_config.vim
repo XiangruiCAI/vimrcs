@@ -52,6 +52,13 @@ let g:user_zen_mode='a'
 
 
 """"""""""""""""""""""""""""""
+" => Zenroom2 + goyo
+""""""""""""""""""""""""""""""
+" shortcut for zen mode
+nnoremap <silent> <leader>z :Goyo<cr>
+
+
+""""""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'

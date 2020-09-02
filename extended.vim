@@ -13,9 +13,8 @@
 if has("mac") || has("macunix")
     set gfn=IBM\ Plex\ Mono:h12,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
-    set guifont=JetBrains\ Mono:h12
-    set guifontwide=FangSong:h14
-    " set guifontwide=Sarasa\ Term\ SC:h12
+    set guifont=Sarasa\ Term\ SC:h14
+    set guifontwide=Sarasa\ Term\ SC:h12
     set ambw=double
 elseif has("gui_gtk2")
     set gfn=Source\ Code\ Pro:h12
