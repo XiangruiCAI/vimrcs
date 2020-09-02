@@ -176,7 +176,7 @@ set ai "Auto indent
 set si "Smart indent
 set nowrap "Wrap lines
 
-" <leader>w: 1st hit-wrap with linebreak, 2nd hit-wrap with nolinebreak; 3rd hit-nowrap
+" <leader>w: 1st press-wrap with linebreak, 2nd-wrap with nolinebreak; 3rd-nowrap
 function AutoWrapToggle()
   if (&wrap == 1)
     if (&linebreak == 1)
@@ -192,13 +192,16 @@ endfunction
 
 " remove auto hard wrap, codes can be formatted by a plugin, 
 " and texts could be formated by `gq`
-set tw=0
+set tw=80
 map <leader>r :call AutoWrapToggle()<CR>
 
 " wrap for Chinese
 set fo+=mM,mB
 set fo+=t
 set fo-=l
+
+" formatting a paragraph
+nnoremap Q gqip
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
