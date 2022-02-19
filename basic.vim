@@ -38,7 +38,8 @@ command W w !sudo tee % > /dev/null
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nu
+"set nu
+set rnu "relativenumber
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
