@@ -37,6 +37,7 @@ Plug 'morhetz/gruvbox'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'tomasr/molokai'
 Plug 'lifepillar/vim-solarized8'
+Plug 'vim-scripts/peaksea'
 " vim 8
 " asynchronous syntastic check
 Plug 'w0rp/ale'

@@ -37,6 +37,9 @@ au GUIEnter * simalt ~x
 " Colorscheme
 set background=dark
 colorscheme space-vim-dark
+" (below for space-vim-dark)
+set termguicolors
+hi LineNr ctermbg=NONE guibg=NONE
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
