@@ -213,19 +213,34 @@ endif
 
 " ignore some warnings
 " Disable overfull/underfull \hbox and all package warnings
-let g:vimtex_quickfix_latexlog = {
-      \ 'overfull' : 0,
-      \ 'underfull' : 0,
-      \ 'packages' : {
-      \   'default' : 0,
-      \ },
-      \}
+let g:vimtex_quickfix_ignore_filters = [
+      \'Underfull \\hbox (badness [0-9]*) in ',
+      \'Overfull \\hbox ([0-9]*.[0-9]*pt too wide) in ',
+      \'Package hyperref Warning: Token not allowed in a PDF string',
+      \'Package typearea Warning: Bad type area settings!',
+  \]
 
 " the quickfix window will close after this number of motions
 let g:vimtex_quickfix_autoclose_after_keystrokes = 3
 
 " don't open the quickfix windows in case there are only warnings.
 let g:vimtex_quickfix_open_on_warning = 0
+
+" map leader key
+let maplocalleader = ","
+
+" change to use xelatex
+let g:vimtex_compiler_latexmk_engines = {'_':'-xelatex'}
+let g:vimtex_compiler_latexrun_engines ={'_':'xelatex'}
+" let g:vimtex_compiler_latexmk = { 
+"         \ 'executable' : 'latexmk',
+"         \ 'options' : [ 
+"         \   '-xelatex',
+"         \   '-file-line-error',
+"         \   '-synctex=1',
+"         \   '-interaction=nonstopmode',
+"         \ ],
+"         \}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gutentags
